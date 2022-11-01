@@ -18,6 +18,12 @@ const CreateNew = (props) => {
     navigate("/");
   };
 
+  const reset = () => {
+    content.reset();
+    author.reset();
+    info.reset();
+  };
+
   return (
     <div>
       <h2>create a new anecdote</h2>
@@ -43,6 +49,9 @@ const CreateNew = (props) => {
           <input name="info" value={info.content} onChange={info.onChange} />
         </div>
         <button>create</button>
+        <button type="reset" onClick={reset}>
+          reset
+        </button>
       </form>
     </div>
   );
